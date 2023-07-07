@@ -9,7 +9,6 @@ class PostRepository {
     final response =
         await dio.get('https://jsonplaceholder.typicode.com/posts');
     if (response.statusCode == 200) {
-      print(response.data);
       return response.data;
     } else {
       throw Exception('There was an error somewehere');
